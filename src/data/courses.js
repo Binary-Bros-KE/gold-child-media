@@ -50,9 +50,13 @@ export const courses = [
     price: "KES 30,000",
     duration: "3 Months",
     level: "Diploma",
-    image: "",
-    coverImage: "",
-    secondaryImages: ["", "", ""],
+    image: "/courses/graphic-design/graphic-design-1.png",
+    coverImage: "/courses/graphic-design/graphic-design-3.jpg",
+    secondaryImages: [
+      "/courses/graphic-design/graphic-design-2.jpg", 
+      "/courses/graphic-design/graphic-design-3.jpg", 
+      "/courses/graphic-design/graphic-design-4.jpg"
+    ],
     modules: [
       "Adobe Photoshop, Illustrator, and InDesign ",
       "Branding & identity design ",
@@ -129,12 +133,12 @@ export const courses = [
     price: "KES 30,000",
     duration: "3 Months",
     level: "Certificate",
-    image: "/courses/music-prod/music-prod-1.png",
+    image: "/courses/music-prod/music-prod-4.jpg",
     coverImage: "/courses/music-prod/music-prod-3.jpg",
     secondaryImages: [
       "/courses/music-prod/music-prod-2.jpg",
        "/courses/music-prod/music-prod-3.jpg",
-        "/courses/music-prod/music-prod-4.jpg"
+        "/courses/music-prod/music-prod-1.png"
       ],
     modules: [
       "Digital Audio Workstations (FL Studio, Logic Pro X, Audacity)",
@@ -211,9 +215,13 @@ export const courses = [
     price: "KES 30,000",
     duration: "3 Months",
     level: "Certificate",
-    image: "",
-    coverImage: "",
-    secondaryImages: ["", "", ""],
+    image: "/courses/fine-art/fine-art-1.png",
+    coverImage: "/courses/fine-art/fine-art-2.jpg",
+    secondaryImages: [
+      "/courses/fine-art/fine-art-2.jpg", 
+      "/courses/fine-art/fine-art-3.jpg", 
+      "/courses/fine-art/fine-art-4.jpg"
+    ],
     modules: [
       "Drawing & Sketching (pencil, charcoal, ink)",
       "Acrylic & watercolor painting",
@@ -251,9 +259,12 @@ export const courses = [
     price: "KES 40,000",
     duration: "4 Months",
     level: "Certificate",
-    image: "",
-    coverImage: "",
-    secondaryImages: ["", "", ""],
+    image: "/courses/music-prod/music-prod-1.png",
+    coverImage: "/courses/web-dev/web-dev-2.png",
+    secondaryImages: [
+      "/courses/web-dev/web-dev-2.png", 
+      "/courses/web-dev/web-dev-1.jpeg", 
+      "/courses/graphic-design/graphic-design-1.png"],
     modules: [
       "HTML5 & CSS3 Fundamentals",
       "Responsive Web Design & Frameworks",
@@ -289,9 +300,13 @@ export const courses = [
     price: "KES 25,000",
     duration: "2 Months",
     level: "Certificate",
-    image: "",
-    coverImage: "",
-    secondaryImages: ["", "", ""],
+    image: "/courses/digital-marketing/digital-marketing-1.png",
+    coverImage: "/courses/fine-art/fine-art-2.jpg",
+    secondaryImages: [
+      "/courses/digital-marketing/digital-marketing-2.jpg", 
+      "/courses/digital-marketing/digital-marketing-3.jpg", 
+      "/courses/fine-art/fine-art-2.jpg"
+    ],
     modules: [
       "Introduction to Digital Marketing",
       "Search Engine Optimization (SEO) & Marketing (SEM)",

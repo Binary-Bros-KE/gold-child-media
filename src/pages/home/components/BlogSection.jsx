@@ -33,7 +33,8 @@ const BlogSection = () => {
   ]
 
   return (
-    <div>
+    <section>
+      <div className="max-w-7xl mx-auto">
       <div className="text-center mb-12">
         <p className="text-orange-500 font-medium mb-2 flex items-center justify-center gap-2">
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -44,7 +45,7 @@ const BlogSection = () => {
         <h2 className="text-4xl font-bold text-gray-900">Latest Blog & News</h2>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         {blogPosts.map((post) => (
           <article
             key={post.id}
@@ -115,7 +116,8 @@ const BlogSection = () => {
           </article>
         ))}
       </div>
-    </div>
+      </div>
+    </section>
   )
 }
 

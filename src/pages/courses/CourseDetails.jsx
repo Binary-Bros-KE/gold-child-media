@@ -20,7 +20,7 @@ export default function CourseDetails() {
         style={{ backgroundImage: `url(${course.coverImage})` }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
-        <div className="absolute max-w-7xl mx-auto px-4 flex flex-col gap-5 justify-center h-full">
+        <div className="absolute max-w-7xl mx-auto px-4 flex flex-col gap-5 justify-center h-full lg:pl-6">
           <h1 className="text-white text-4xl font-extrabold">{course.title}</h1>
           <p className="text-white text-xl">Home / Courses / {course.category}</p>
         </div>

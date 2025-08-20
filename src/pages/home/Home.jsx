@@ -1,6 +1,5 @@
 import AboutUs from "./components/AboutUs.jsX";
 import BlogSection from "./components/BlogSection";
-import ContactForm from "./components/ContactForm";
 import ContactSection from "./components/ContactSection.jsX";
 import CoursesSection from "./components/CoursesSection";
 import FAQSection from "./components/FAQSection";
@@ -45,7 +44,6 @@ export default function Home() {
 
       <div>
         <FAQSection />
-        <ContactForm />
       </div>
 
       <div>
