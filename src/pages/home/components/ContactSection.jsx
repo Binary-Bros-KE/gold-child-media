@@ -41,7 +41,7 @@ export default function ContactSection() {
   ]
 
   return (
-    <section className="py-16 px-4 bg-rose-50">
+    <section className="py-16 px-4 bg-blue-50">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 items-center">
           {/* Left side - Celebrity Image */}

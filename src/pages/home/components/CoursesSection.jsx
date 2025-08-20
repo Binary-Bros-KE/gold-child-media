@@ -1,72 +1,7 @@
 import { ArrowRight } from "lucide-react"
+import { courses } from "../../../data/courses"
 
 export default function CoursesSection() {
-  const courses = [
-    {
-      id: 1,
-      title: "Videography & Photography",
-      category: "Visual Arts",
-      description:
-        "Master the art of visual storytelling through professional videography and photography techniques with industry-standard equipment.",
-      image: "/courses/videography/videography-index.png",
-    },
-    {
-      id: 2,
-      title: "Graphic Design",
-      category: "Design",
-      description:
-        "Create stunning visual communications using Adobe Creative Suite and modern design principles for print and digital media.",
-      image: "/courses/graphic/graphic-design.png",
-    },
-    {
-      id: 3,
-      title: "Web Development",
-      category: "Technology",
-      description:
-        "Build responsive websites and web applications using modern frameworks like React, Next.js, and cutting-edge technologies.",
-      image: "",
-    },
-    {
-      id: 4,
-      title: "Digital Marketing",
-      category: "Marketing",
-      description:
-        "Learn comprehensive digital marketing strategies including SEO, social media marketing, and data-driven campaign management.",
-      image: "",
-    },
-    {
-      id: 5,
-      title: "Music Production",
-      category: "Audio",
-      description:
-        "Produce professional-quality music using industry-standard DAWs and learn mixing, mastering, and sound design techniques.",
-      image: "",
-    },
-    {
-      id: 6,
-      title: "UI/UX Design",
-      category: "Design",
-      description:
-        "Design intuitive user interfaces and create exceptional user experiences using Figma, Adobe XD, and user research methods.",
-      image: "",
-    },
-    {
-      id: 7,
-      title: "Social Media Management",
-      category: "Marketing",
-      description:
-        "Master social media strategy, content creation, community management, and analytics across all major platforms.",
-      image: "",
-    },
-    {
-      id: 8,
-      title: "Content Creation",
-      category: "Media",
-      description:
-        "Develop skills in creating engaging content for various platforms including video editing, copywriting, and brand storytelling.",
-      image: "",
-    },
-  ]
 
   return (
     <section className="py-16 px-4 bg-gray-50">
@@ -87,9 +22,10 @@ export default function CoursesSection() {
         {/* Courses Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-16">
           {courses.map((course) => (
-            <div
+            <a
+              href={`/courses/${course.name}`}
               key={course.id}
-              className="bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group cursor-pointer"
             >
               {/* Course Image */}
               <div className="relative h-48 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
@@ -114,11 +50,11 @@ export default function CoursesSection() {
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                   {course.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{course.description}</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">{course.briefDescription}</p>
 
                 {/* Read More Link */}
                 <div className="flex items-center justify-between">
-                  <button className="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all group/btn">
+                  <button className="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all group/btn cursor-pointer">
                     Read More
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </button>
@@ -129,16 +65,8 @@ export default function CoursesSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
-        </div>
-
-        {/* View All Courses Button */}
-        <div className="text-center mt-12">
-          <button className="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-full font-medium transition-colors flex items-center gap-2 mx-auto">
-            View All Courses
-            <ArrowRight className="w-4 h-4" />
-          </button>
         </div>
       </div>
     </section>
