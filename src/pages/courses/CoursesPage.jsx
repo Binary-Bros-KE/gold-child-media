@@ -157,7 +157,7 @@ export default function CoursesPage() {
 
                                             {/* Book Icon */}
                                             <div className="opacity-20 group-hover:opacity-40 transition-opacity">
-                                                <img src="/placeholder.svg" alt="Course icon" className="w-8 h-8" />
+                                                <img src="/graphics/cou-icon.png" alt="Course icon" className="w-8 h-8" />
                                             </div>
                                         </div>
                                     </div>

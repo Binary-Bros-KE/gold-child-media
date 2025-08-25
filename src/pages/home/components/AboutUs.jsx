@@ -1,6 +1,11 @@
-import { FaGraduationCap } from "react-icons/fa"
+import { FaGraduationCap, FaPlay } from "react-icons/fa"
+import useVideoModal from "../../../hooks/useVideoModal"
+import VideoModal from "../../../components/VideoModal"
 
 export default function AboutUs() {
+    const { isOpen, openModal, closeModal } = useVideoModal()
+
+
     return (
         <section className="py-16 px-4 bg-gray-50">
             <div className="max-w-7xl mx-auto">
@@ -54,11 +59,11 @@ export default function AboutUs() {
 
                             <div className="space-y-4 text-gray-600 leading-relaxed">
                                 <p>
-                                   Goldchild Media Training Institute (GMTI) is a vibrant and forward-thinking creative academy based in Nairobi, Kenya. Founded to empower Africa’s next generation of visual storytellers, content creators, and artists, we combine hands-on practice, industry relevance, and personal development to prepare our learners for success in today’s dynamic media landscape.
+                                    Goldchild Media Training Institute (GMTI) is a vibrant and forward-thinking creative academy based in Nairobi, Kenya. Founded to empower Africa’s next generation of visual storytellers, content creators, and artists, we combine hands-on practice, industry relevance, and personal development to prepare our learners for success in today’s dynamic media landscape.
                                 </p>
 
                                 <p>
-                                   Fully accredited by the National Industrial Training Authority (NITA), GMTI offers high-impact training in disciplines such as videography, photography, graphic design, music production, deejaying, fine art, vlogging, and digital content creation. Our experienced trainers, modern facilities, and industry partnerships ensure students graduate with not just technical expertise, but also the creative confidence and entrepreneurial mindset to thrive.
+                                    Fully accredited by the National Industrial Training Authority (NITA), GMTI offers high-impact training in disciplines such as videography, photography, graphic design, music production, deejaying, fine art, vlogging, and digital content creation. Our experienced trainers, modern facilities, and industry partnerships ensure students graduate with not just technical expertise, but also the creative confidence and entrepreneurial mindset to thrive.
                                 </p>
                             </div>
                         </div>
@@ -84,22 +89,34 @@ export default function AboutUs() {
                                 <div>
                                     <h3 className="font-bold text-gray-800 text-lg mb-2">Real-World Career Pathways</h3>
                                     <p className="text-gray-600 text-sm">
-                                       Access internships, mentorships, and networking opportunities through our collaborations with top creatives and media companies.
+                                        Access internships, mentorships, and networking opportunities through our collaborations with top creatives and media companies.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Read More Button */}
-                        <div>
-                            <button className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center gap-2">
+                        <div className="flex gap-10 max-md:flex-col max-md:gap-5">
+                            <a
+                                href="/about-us"
+                                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center gap-2 cursor-pointer"
+                            >
                                 Read More
                                 <span>→</span>
+                            </a>
+                            <button
+                                className=" border border-primary text-primary px-8 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center gap-2 cursor-pointer"
+                                onClick={openModal}
+
+                            >
+                                <span> <FaPlay /></span>
+                                Intro Video
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <VideoModal isOpen={isOpen} onClose={closeModal} />
         </section>
     )
 }

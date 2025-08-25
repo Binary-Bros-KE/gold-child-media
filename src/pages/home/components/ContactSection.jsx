@@ -15,7 +15,7 @@ export default function ContactSection() {
       icon: MessageCircle,
       title: "WhatsApp",
       description: "Quick chat for instant responses",
-      action: "Message Now",
+      action: "+254 798 475 554",
       bgColor: "bg-green-50",
       iconColor: "text-green-600",
       hoverColor: "hover:bg-green-100",
@@ -95,9 +95,9 @@ export default function ContactSection() {
 
             {/* Call to Action */}
             <div className="text-center lg:text-left">
-              <button className="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+              <a href="/courses" className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
                 Get Started Today
-              </button>
+              </a>
             </div>
           </div>
         </div>

@@ -68,9 +68,11 @@ export default function HeroSection() {
           </p>
 
           {/* CTA Button */}
-          <button className="bg-primary hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 text-lg">
+          <a
+            href="/courses"
+            className="bg-primary hover:bg-secondary text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 text-lg">
             Start Your Journey →
-          </button>
+          </a>
         </div>
       </div>
 

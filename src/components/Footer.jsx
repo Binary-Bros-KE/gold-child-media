@@ -39,8 +39,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/gallery" className="text-gray-300 hover:text-primary transition-colors">
-                  Gallery
+                <a href="/blog" className="text-gray-300 hover:text-primary transition-colors">
+                  Blog
                 </a>
               </li>
               <li>

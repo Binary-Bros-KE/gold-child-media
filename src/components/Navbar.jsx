@@ -15,12 +15,15 @@ import {
   FaGraduationCap,
 } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6";
+import { useContactModal } from "../hooks/useContactModal";
+import ContactModal from "./ContactModal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isCoursesOpen, setIsCoursesOpen] = useState(false)
   const [isPagesOpen, setIsPagesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const { isContactOpen, openContactModal, closeContactModal } = useContactModal()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,13 +82,14 @@ const Navbar = () => {
         <div className="container mx-auto">
           <div className="flex justify-between items-center h-15">
             {/* Logo */}
-            <motion.div
+            <motion.a
+            href="/"
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
               <img src="/main-logo-light.png" alt="" className="h-10" />
-            </motion.div>
+            </motion.a>
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-8">
@@ -142,7 +146,7 @@ const Navbar = () => {
               <a href="/management" className="text-gray-700 hover:text-primary font-medium transition-colors">
                 Management
               </a>
-              <a href="#" className="text-gray-700 hover:text-primary font-medium transition-colors">
+              <a href="/contact" className="text-gray-700 hover:text-primary font-medium transition-colors">
                 Contact
               </a>
             </div>
@@ -152,6 +156,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={openContactModal}
                 className="bg-primary text-white px-6 py-2 cursor-pointer font-semibold hover:from-primary hover:to-primary transition-all duration-300 shadow-lg max-md:hidden"
               >
                 ADMISSION OPEN
@@ -229,13 +234,14 @@ const Navbar = () => {
                 <a href="/management" className="block text-gray-700 hover:text-primary font-medium transition-colors">
                   Management
                 </a>
-                <a href="#" className="block text-gray-700 hover:text-primary font-medium transition-colors">
+                <a href="/contact" className="block text-gray-700 hover:text-primary font-medium transition-colors">
                   Contact
                 </a>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
+         <ContactModal isOpen={isContactOpen} onClose={closeContactModal} />
       </motion.nav>
     </>
   )

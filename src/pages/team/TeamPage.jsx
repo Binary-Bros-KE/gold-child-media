@@ -81,7 +81,7 @@ export default function TeamPage() {
         style={{ backgroundImage: `url('/team/team.jpg')` }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
-        <div className="absolute max-w-7xl mx-auto px-4 flex flex-col gap-5 justify-center h-full lg:pl-10">
+        <div className="absolute max-w-7xl mx-auto px-4 flex flex-col gap-5 justify-center h-full lg:pl-20">
           <h1 className="text-white text-4xl font-extrabold">Governance & Leadership</h1>
           <p className="text-white text-xl">Home / Our Team</p>
         </div>
@@ -309,7 +309,7 @@ export default function TeamPage() {
               Explore Our Courses
             </a>
             <a
-              href="/about"
+              href="/about-us"
               className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-teal-600 transition-colors"
             >
               Learn More About Us

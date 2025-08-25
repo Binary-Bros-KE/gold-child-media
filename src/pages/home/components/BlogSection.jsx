@@ -1,40 +1,10 @@
+import { blogs } from "../../../data/blogs"
+
 const BlogSection = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "5 Essential Photography Tips for Beginners",
-      excerpt:
-        "Master the fundamentals of photography with these essential tips that will transform your creative vision and technical skills.",
-      image: "", // Leave blank for user to add
-      date: "15th August 2024",
-      author: "Admin",
-      comments: 8,
-    },
-    {
-      id: 2,
-      title: "The Future of Digital Marketing in Kenya",
-      excerpt:
-        "Explore emerging trends and opportunities in Kenya's digital marketing landscape and how to position yourself for success.",
-      image: "", // Leave blank for user to add
-      date: "12th August 2024",
-      author: "Admin",
-      comments: 12,
-    },
-    {
-      id: 3,
-      title: "Building Your Creative Portfolio: A Complete Guide",
-      excerpt:
-        "Learn how to create a compelling portfolio that showcases your skills and attracts potential clients and employers.",
-      image: "", // Leave blank for user to add
-      date: "10th August 2024",
-      author: "Admin",
-      comments: 6,
-    },
-  ]
+  const blogPosts = blogs.slice(0, 3)
 
   return (
-    <section>
-      <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto py-20">
       <div className="text-center mb-12">
         <p className="text-orange-500 font-medium mb-2 flex items-center justify-center gap-2">
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -97,14 +67,16 @@ const BlogSection = () => {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-orange-500 transition-colors">
-                {post.title}
-              </h3>
+              <a href={`/blog/${post.slug}`}>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-orange-500 transition-colors cursor-pointer">
+                  {post.title}
+                </h3>
+              </a>
 
               <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
 
               <a
-                href="#"
+                href={`/blog/${post.slug}`}
                 className="text-orange-500 hover:text-orange-600 font-medium flex items-center gap-2 transition-colors"
               >
                 Read More
@@ -116,8 +88,7 @@ const BlogSection = () => {
           </article>
         ))}
       </div>
-      </div>
-    </section>
+    </div>
   )
 }
 

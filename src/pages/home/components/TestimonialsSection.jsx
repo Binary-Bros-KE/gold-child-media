@@ -1,46 +1,84 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Quote } from "lucide-react";
 import { FaStar, FaCrown } from "react-icons/fa"
 
 const testimonials = [
   {
     id: 1,
     name: "Grace Wanjiku",
-    role: "Student",
+    role: "Videography & Photography Student",
     rating: 5,
     score: "98",
-    text: "Goldchild Media Institute transformed my passion for photography into a professional career. The hands-on training with industry-standard equipment gave me the confidence to start my own photography business.",
+    text: "Goldchild Media Institute's hands-on training with professional equipment gave me the confidence to transform my passion into a professional career. The focus on portfolio creation was key to starting my own photography business.",
     image: "",
   },
   {
     id: 2,
     name: "Kevin Mwangi",
-    role: "Student",
+    role: "Web Design & Development Student",
     rating: 5,
     score: "99",
-    text: "The web development course exceeded my expectations. The instructors are industry experts who provided practical skills that landed me a job at a top tech company in Nairobi.",
+    text: "The web development course exceeded my expectations. The instructors are industry experts who provided practical, project-based skills that prepared me for my internship opportunity with a leading tech company in Nairobi.",
     image: "",
   },
   {
     id: 3,
     name: "Mercy Akinyi",
-    role: "Student",
+    role: "Graphic Design Student",
     rating: 5,
     score: "97",
-    text: "Learning graphic design at Goldchild was the best decision I made. The creative studios and modern software access helped me build an impressive portfolio that clients love.",
+    text: "Learning graphic design at Goldchild was the best decision. The creative studios and access to modern software like Adobe Creative Suite helped me build an impressive portfolio that clients love.",
     image: "",
   },
   {
     id: 4,
     name: "Brian Ochieng",
-    role: "Student",
+    role: "Digital Marketing Student",
     rating: 5,
     score: "99",
-    text: "The videography program gave me skills I never thought possible. From camera work to post-production, I now create content for major brands and events across Kenya.",
+    text: "The digital marketing program was fantastic. I now understand how to run effective social media campaigns, optimize content for search engines, and use analytics to drive real business results. The skills I learned are directly applicable to the job market.",
     image: "",
   },
-]
+  {
+    id: 5,
+    name: "Cynthia Gacheru",
+    role: "Music Production Student",
+    rating: 5,
+    score: "98",
+    text: "The music production course gave me the skills to create professional-grade tracks from scratch. The instructors are amazing and the access to the audio production room was a game-changer for my sound.",
+    image: "",
+  },
+  {
+    id: 6,
+    name: "Joseph Kamau",
+    role: "Deejaying Student",
+    rating: 5,
+    score: "97",
+    text: "The Deejaying program was exactly what I needed to kickstart my career. I mastered industry-standard equipment and learned essential performance skills, which gave me the confidence to start getting bookings for events.",
+    image: "",
+  },
+  {
+    id: 7,
+    name: "Fiona Adhiambo",
+    role: "Vlogging & Digital Content Creation Student",
+    rating: 5,
+    score: "99",
+    text: "I learned how to create high-impact, story-driven content for social media. Goldchild taught me everything from scripting to editing and audience engagement, which helped me grow my YouTube channel rapidly.",
+    image: "",
+  },
+  {
+    id: 8,
+    name: "Dennis Otieno",
+    role: "Fine Art & Illustration Student",
+    rating: 5,
+    score: "98",
+    text: "The Fine Art program allowed me to explore both traditional and digital mediums. My portfolio, developed with the guidance of my instructors, helped me get my work featured in an art gallery.",
+    image: "",
+  },
+];
+
 
 export default function TestimonialsSection() {
   return (
@@ -90,7 +128,7 @@ export default function TestimonialsSection() {
             >
               {/* Score Badge */}
               <div className="absolute -top-3 -right-3 bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg shadow-lg">
-                {testimonial.score}
+                <Quote />
               </div>
 
               {/* Star Rating */}
