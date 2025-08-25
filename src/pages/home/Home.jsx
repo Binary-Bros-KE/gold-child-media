@@ -1,4 +1,4 @@
-import AboutUs from "./components/AboutUs.jsX";
+import AboutUs from "./components/AboutUs.jsx";
 import BlogSection from "./components/BlogSection";
 import ContactSection from "./components/ContactSection.jsX";
 import CoursesSection from "./components/CoursesSection";
