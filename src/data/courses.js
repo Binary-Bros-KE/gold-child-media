@@ -1,5 +1,9 @@
 export const courses = [
-  {
+
+];
+
+[
+    {
     id: 1,
     name: "videography-photography",
     title: "Videography & Photography",
@@ -71,8 +75,7 @@ export const courses = [
     instructor: "Specialist in Music Production",
     schedule: "Full-Time (3 to 4 days per week) or Part-Time (evening and weekend sessions)",
   },
-];
-
+]
 
 
 
